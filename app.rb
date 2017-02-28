@@ -6,8 +6,20 @@ get '/' do
 end
 
 
-get '/cat' do
+get '/random-cat' do
 
-erb(:index)
+  @names = ["T'Challa", "Steve Rogers", "Wanda Maximoff"].sample
+
+  erb(:index)
+
+end
+
+get '/named-cat' do
+
+  p params
+
+  @names = params[:name]
+
+  erb(:index)
 
 end
