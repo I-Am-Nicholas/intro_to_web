@@ -1,20 +1,7 @@
 require 'sinatra'
 
 
-get '/' do
-  "I'm riding shotgun. I've got your back. Sleep easy."
-end
-
-
-get '/random-cat' do
-
-  @names = ["T'Challa", "Steve Rogers", "Wanda Maximoff"].sample
-
-  erb(:index)
-
-end
-
-get '/named-cat' do
+post '/named-cat' do
 
   p params
 
@@ -22,5 +9,14 @@ get '/named-cat' do
   @last_name = params[:last_name]
 
   erb(:index)
+
+end
+
+
+get '/form' do
+
+
+  erb(:index2)
+
 
 end
