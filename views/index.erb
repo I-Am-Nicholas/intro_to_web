@@ -1,7 +1,10 @@
-
+<% if @names %>
 <h1>My name is <%= @names %> </h1>
-<h1>My last name is <%= @last_name %> </h1>
-
+<% end %>
+<form name ="index" action="/named-cat">
+  <input type="text" name="name" />
+  <input type="submit" value="Submit" />
+</form>
 
 <div style='border: 3px dashed red; padding: 20px'>
   <img src='http://bit.ly/1eze8aE';>
